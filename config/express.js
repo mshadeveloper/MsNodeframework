@@ -19,6 +19,8 @@ app.use(bodyparser.json())
 app.use(methodoverride())
 app.set('views','./app/views')
 app.set('view engine','ejs')
+
   require('../app/routing/index.server.routes.js')(app);
+  app.use(express.static('./public'))
   return app;
 }
