@@ -15,9 +15,10 @@ module.exports=function(){
     app.use(compress())
   }
 
-  app.use(bodyparser.json())
-  app.use(methodoverride())
-
+app.use(bodyparser.json())
+app.use(methodoverride())
+app.set('views','./app/views')
+app.set('view engine','ejs')
   require('../app/routing/index.server.routes.js')(app);
   return app;
 }
