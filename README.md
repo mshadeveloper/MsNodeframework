@@ -43,3 +43,25 @@ db_engine: obj.db_engine('mongoose'),
 
 
 </pre>
+
+<b>Routing</b>
+<p> for example :</p>
+<pre> 
+
+module.exports=function(app){
+  var index=require('../controllers/index.server.controller.js') --this to get the controller functions
+  app.get('/',index.render);--mean when request get  / root apply the index which is controller function named render 
+}
+</pre>
+
+<b>controllers</b>
+
+<p>for example :</p>
+
+<pre>
+exports.render=function(req,res){ //render function has request and response parameters
+  res.render('index',{title:'hello world'});
+}
+
+
+</pre>
