@@ -27,7 +27,7 @@ db_engin should shoose the one of three engins mongoose ,mysql or pg
 module.exports={
 
  
-  mangoconnect:'mongodb://'+obj.username('dbuser')+':'+obj.password('dbpass')+'@127.0.0.1:27017/'+obj.database('posts'),
+  mangoconnect:'mongodb://'+obj.username('dbuser')+':'+obj.password('dbpass')+'@127.0.0.1:27017/'+obj.database('dbname'),
   pgconnect:'postgresql://'+obj.username("root")+':'+obj.password('')+'@localhost:3211/'+obj.database(''),
   mysqlconnect:{
   host     : 'localhost',
