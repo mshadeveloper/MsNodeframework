@@ -8,6 +8,8 @@ var bodyparser=require('body-parser');
 var methodoverride=require('method-override')
 var config=require('./config')
 var session =require('express-session')
+var passport=require('passport');
+var passportsetup=require('./config/passport')(passport)
 module.exports=function(){
 
   var app=express()

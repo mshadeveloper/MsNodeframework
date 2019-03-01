@@ -18,7 +18,7 @@ define(obj,'db_engine', function(val) {return val;});
 module.exports={
 
   //development configration
-  mangoconnect:'mongodb://'+obj.username('')+':'+obj.password('')+'@127.0.0.1:27017/'+obj.database('posts'),
+  mangoconnect:'mongodb://'+obj.username('root')+':'+obj.password('')+'@127.0.0.1:27017/'+obj.database('posts'),
   pgconnect:'postgresql://'+obj.username("root")+':'+obj.password('')+'@localhost:3211/'+obj.database(''),
   mysqlconnect:{
   host     : 'localhost',
