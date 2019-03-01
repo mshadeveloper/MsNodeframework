@@ -40,7 +40,7 @@
   providerData: {},
   created: {
 type: Date,
-    default: Date.now
+    default: Date.now()
   }
 });
 UserSchema.virtual('fullName').get(function() {
@@ -186,7 +186,7 @@ module.exports.save=function(fields,update,res){ //update or insert function dep
   } else {
 
 const text = (update===false)?'INSERT INTO users (fullname,username,password,email,registerdate) VALUES($1, $2, $3,$4,$5)':'UPDATE users SET fullname=$1,username=$2, password=$3,email=$4 ,registerdate= $5 where id=$6';
-const values = (update===false)?[fields.firstname+' '+fields.lastname,fields.username, fields.password,fields.email,fields.registerdate]:[fields.firstname+' '+fields.lastname,fields.username, fields.password,fields.email,fields.registerdate,fields.id];
+const values = (update===false)?[fields.firstName+' '+fields.lastName,fields.username, fields.password,fields.email,fields.registerdate]:[fields.firstName+' '+fields.lastName,fields.username, fields.password,fields.email,fields.registerdate,fields.id];
 
 
 // callback
