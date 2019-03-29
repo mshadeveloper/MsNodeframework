@@ -5,7 +5,7 @@ var passport = require('passport'),
        config=require('config');
        switch(config.db_engine){
          case 'mongoose':
-   module.exports = function() {
+   module.exports = function(passport) {
      var User = mongoose.model('User');
      passport.serializeUser(function(user, done) {
        done(null, user.id);

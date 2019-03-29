@@ -9,7 +9,7 @@ var methodoverride=require('method-override')
 var config=require('./config')
 var session =require('express-session')
 var passport=require('passport');
-var passportsetup=require('./config/passport')(passport)
+//var passportsetup=require('passport')(passport)
 module.exports=function(){
 
   var app=express()
